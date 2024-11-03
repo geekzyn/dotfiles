@@ -6,7 +6,7 @@ vim.opt.number = true -- line numbers
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- enable highlighting of the current line
 vim.opt.scrolloff = 10 -- minimal number of screen lines to keep above and below the current line
-vim.opt.mouse = 'a' -- enable mouse mode
+vim.opt.mouse = "a" -- enable mouse mode
 vim.opt.showmode = false -- disable show mode (since we have a statusline plugin)
 vim.opt.undofile = true -- save undo history
 vim.opt.inccommand = "nosplit" -- preview incremental substitution
@@ -15,9 +15,14 @@ vim.opt.shiftwidth = 2 -- 2 spaces for indent width
 vim.opt.expandtab = true -- expand tab to spaces
 vim.opt.autoindent = true -- copy indent from current line when starting new one
 vim.opt.smartindent = true -- insert indents automatically
-vim.opt.wrap = false -- disable line wrap (display lines as one long line) 
+vim.opt.wrap = false -- disable line wrap (display lines as one long line)
 vim.opt.linebreak = true -- wrap lines at convenient points
 vim.opt.breakindent = true -- enable break indent to indent wrapped line
+
+-- Code Fold
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -25,10 +30,10 @@ vim.opt.breakindent = true -- enable break indent to indent wrapped line
 --  integration works automatically. Requires Neovim >= 0.10.0
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+	vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 end)
 
--- Case-insensitive Searching 
+-- Case-insensitive Searching
 -- UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -49,7 +54,7 @@ vim.opt.splitkeep = "screen"
 
 -- Sets colorscheme
 vim.opt.termguicolors = false
-vim.cmd.colorscheme 'habamax'
+vim.cmd.colorscheme("habamax")
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
