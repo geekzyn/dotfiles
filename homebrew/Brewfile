@@ -7,6 +7,8 @@
 # brew "ripgrep"
 # brew "tree"
 # brew "stow"
+# brew "terraform"
+# brew "zoxide"
 # cask "font-jetbrains-mono-nerd-font"
 # cask "microsoft-teams"
 # cask "microsoft-outlook"

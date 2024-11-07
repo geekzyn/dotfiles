@@ -1,3 +1,9 @@
+#######################################################################
+#                          General settings                           #
+#######################################################################
+# Enable autocompletion
+autoload -Uz compinit && compinit
+
 # use vim in command-line
 set -o vi
 
@@ -5,6 +11,9 @@ set -o vi
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#######################################################################
+#                        Environment variables                        #
+#######################################################################
 # zsh history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -17,9 +26,23 @@ setopt HIST_VERIFY
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+#######################################################################
+#                           Tools settings                            #
+#######################################################################
 # Starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
+# terraform autocompletion
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+#######################################################################
+#                            Custom alias                             #
+#######################################################################
