@@ -9,6 +9,7 @@
 # brew "stow"
 # brew "terraform"
 # brew "zoxide"
+# brew "google-chrome"
 # cask "font-jetbrains-mono-nerd-font"
 # cask "microsoft-teams"
 # cask "microsoft-outlook"
