@@ -24,7 +24,7 @@ return {
 				theme = "auto",
 				component_separators = { left = "|", right = "|" },
 				section_separators = { left = "", right = "" },
-				-- disabled_filetypes = { "neo-tree" },
+				disabled_filetypes = { "neo-tree" },
 				ignore_focus = {},
 				always_divide_middle = true,
 				always_show_tabline = true,
@@ -58,7 +58,7 @@ return {
 			tabline = {},
 			winbar = {},
 			inactive_winbar = {},
-			extensions = { "neo-tree", "lazy" },
+			extensions = { "lazy" },
 		}
 
 		return opts

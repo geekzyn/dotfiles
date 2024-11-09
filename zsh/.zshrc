@@ -46,3 +46,4 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 #######################################################################
 #                            Custom alias                             #
 #######################################################################
+alias ls='ls --color=auto'
