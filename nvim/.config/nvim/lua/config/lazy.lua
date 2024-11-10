@@ -19,4 +19,6 @@ require("lazy").setup({
 	require("plugins.colorscheme"),
   require("plugins.smart-splits"),
 	require("plugins.lualine"),
+  -- require("plugins.toggleterm"),
+	require("plugins.snacks"),
 })
