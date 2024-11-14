@@ -49,11 +49,6 @@ vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'Move up', silent = true }
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
--- -- File management
--- vim.keymap.set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save file' })
--- vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', { desc = 'Quit file' })
--- vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit all' })
-
 -- Other
 vim.keymap.set('v', 'p', '"_dP', { desc = 'Keep last yanked when pasting', noremap = true, silent = true })
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete character without copying into register', noremap = true, silent = true })
@@ -62,7 +57,5 @@ vim.keymap.set("x", "c", '"_c', { desc = 'Change text without copying into regis
 vim.keymap.set("n", "cc", '"_cc', { desc = 'Change line without copying into register', noremap = true, silent = true })
 vim.keymap.set("n", "C", '"_C', { desc = 'Change text until EOL without copying into register', noremap = true, silent = true })
 
--- -- Terminal
--- vim.keymap.set('n', '<leader>to', ':split term://zsh<CR>:resize 10<CR>', { desc = 'Open integrated terminal', noremap = true, silent = true })
--- vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { desc = 'Normal mode in integrated terminal', noremap = true, silent = true })
--- vim.keymap.set('t', '<C-d>', 'exit<CR>', { desc = 'Close integrated terminal', noremap = true, silent = true })
+-- Terminal
+-- '<C-`>, { desc = 'toggle integrated terminal' })
