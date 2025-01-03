@@ -68,6 +68,8 @@ outer.right =      0
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
+cmd-h = [] # Disable "hide application"
+cmd-alt-h = [] # Disable "hide others"
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
@@ -86,13 +88,13 @@ outer.right =      0
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-# alt-enter = '''exec-and-forget osascript -e '
-# tell application "Terminal"
-#     do script
-#     activate
-# end tell'
-# '''
-
+alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+alt-b = '''exec-and-forget osascript -e '
+tell application "Safari"
+    make new document at end of documents
+    activate
+end tell'
+'''
 # override efaults in macOS
 # cmd = 'close'
 # cmd-m = 'macos-native-minimize'
@@ -170,3 +172,7 @@ alt-shift-l = ['join-with right', 'mode main']
 1 = 'main'                                        # Main monitor (System Settings → Displays → Use as)
 2 = ['NZXTCANVAS27Q \(1\)', 'secondary', 'main']  # Non-main monitor in case when there are only two monitors
 C = ['NZXTCANVAS27Q \(2\)', 'main']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']

@@ -47,3 +47,13 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 #                            Custom alias                             #
 #######################################################################
 alias ls='ls --color=auto'
+
+. "$HOME/.local/bin/env"
+
+# pnpm
+export PNPM_HOME="/Users/abdelalizyn/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

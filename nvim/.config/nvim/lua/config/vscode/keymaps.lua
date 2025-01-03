@@ -19,7 +19,7 @@ vim.keymap.set('n', '<Tab>', "<cmd>lua require('vscode').action('workbench.actio
 vim.keymap.set('n', '<S-Tab>', "<cmd>lua require('vscode').action('workbench.action.previousEditorInGroup')<CR>")
 -- '<C-Tab>', { desc = 'Open next' })
 -- '<C-S>Tab', { desc = 'Open previous' })
--- '<A>p', { desc = 'Go to file' })
+-- '<A-p>', { desc = 'Go to file' })
 
 -- Windows (viewport on a buffer)
 -- '<C-w>v', { desc = 'Split window vertically' })
@@ -58,4 +58,9 @@ vim.keymap.set("n", "cc", '"_cc', { desc = 'Change line without copying into reg
 vim.keymap.set("n", "C", '"_C', { desc = 'Change text until EOL without copying into register', noremap = true, silent = true })
 
 -- Terminal
--- '<C-`>, { desc = 'toggle integrated terminal' })
+-- '<C-`>', { desc = 'toggle integrated terminal' })
+
+-- Suggestions (autocompletion)
+-- '<A-i>', { desc = 'Trigger suggestions' })
+-- '<C-n>', { desc = 'Next suggestion' })
+-- '<C-p>', { desc = 'Previous suggestion' })
