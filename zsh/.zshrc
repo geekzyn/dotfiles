@@ -7,6 +7,9 @@ autoload -Uz compinit && compinit
 # use vim in command-line
 set -o vi
 
+# ignore hashtag
+setopt INTERACTIVE_COMMENTS
+
 # zsh syntax highlighting and autosuggestions
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -46,7 +49,7 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 #######################################################################
 #                            Custom alias                             #
 #######################################################################
-alias ls='ls --color=auto'
+alias ls='ls -ls --color=auto'
 
 . "$HOME/.local/bin/env"
 
@@ -57,3 +60,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# openjdk
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

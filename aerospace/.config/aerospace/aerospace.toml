@@ -171,6 +171,9 @@ alt-shift-l = ['join-with right', 'mode main']
 [workspace-to-monitor-force-assignment]
 1 = 'main'                                        # Main monitor (System Settings → Displays → Use as)
 2 = ['NZXTCANVAS27Q \(1\)', 'secondary', 'main']  # Non-main monitor in case when there are only two monitors
+3 = ['NZXTCANVAS27Q \(1\)', 'secondary', 'main']  # Non-main monitor in case when there are only two monitors
+4 = ['NZXTCANVAS27Q \(1\)', 'secondary', 'main']  # Non-main monitor in case when there are only two monitors
+5 = ['NZXTCANVAS27Q \(1\)', 'secondary', 'main']  # Non-main monitor in case when there are only two monitors
 C = ['NZXTCANVAS27Q \(2\)', 'main']
 
 [[on-window-detected]]
