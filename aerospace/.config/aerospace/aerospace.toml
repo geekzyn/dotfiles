@@ -172,7 +172,7 @@ alt-shift-l = ['join-with right', 'mode main']
 1 = 'main' # Main monitor (System Settings → Displays → Use as)
 2 = [2, 'secondary', 'main']
 3 = [2, 'secondary', 'main']
-4 = [2, 'secondary', 'main']
+4 = [3, 'secondary', 'main']
 5 = [2, 'secondary', 'main']
 C = [3, 'main']
 
