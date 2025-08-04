@@ -170,11 +170,11 @@ alt-shift-l = ['join-with right', 'mode main']
 # See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [workspace-to-monitor-force-assignment]
 1 = 'main' # Main monitor (System Settings → Displays → Use as)
-2 = [3, 'secondary', 'main']
-3 = [3, 'secondary', 'main']
-4 = [1, 'secondary', 'main']
-5 = [3, 'secondary', 'main']
-C = [1, 'main']
+2 = ['NZXTCANVAS27Q \(1\)', 2, 'secondary', 'main']
+3 = ['NZXTCANVAS27Q \(1\)', 2, 'secondary', 'main']
+4 = ['NZXTCANVAS27Q \(2\)', 3, 'secondary', 'main']
+5 = ['NZXTCANVAS27Q \(1\)', 2, 'secondary', 'main']
+C = ['NZXTCANVAS27Q \(2\)', 3, 'main']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
