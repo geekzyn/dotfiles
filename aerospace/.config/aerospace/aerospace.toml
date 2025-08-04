@@ -172,9 +172,9 @@ alt-shift-l = ['join-with right', 'mode main']
 1 = 'main' # Main monitor (System Settings → Displays → Use as)
 2 = [3, 'secondary', 'main']
 3 = [3, 'secondary', 'main']
-4 = [2, 'secondary', 'main']
+4 = [1, 'secondary', 'main']
 5 = [3, 'secondary', 'main']
-C = [2, 'main']
+C = [1, 'main']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
