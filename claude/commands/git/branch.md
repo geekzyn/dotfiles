@@ -7,7 +7,7 @@ allowed-tools:
   - Bash(git fetch:*)
   - Bash(git pull:*)
   - AskUserQuestion
-argument-hint: "[type/description], 'delete' to remove current branch, or 'delete all' to remove all branches"
+argument-hint: "[type/description], 'delete' to remove current branch, or 'delete --all' to remove all branches"
 model: haiku
 ---
 
@@ -56,7 +56,7 @@ $ARGUMENTS
 
 ### DELETE MODE
 
-**If arguments equal "delete all"**:
+**If arguments equal "delete --all"**:
 1. Fetch remote branches and prune deleted ones: `git fetch --prune`
 2. Checkout to main if not already there: `git checkout main`
 3. Pull latest changes: `git pull`
@@ -157,4 +157,14 @@ After branch name validation, user will be prompted to select source branch (cur
 | Input | Action |
 |-------|--------|
 | `delete` | Deletes current branch, checks out main, pulls latest |
-| `delete all` | Deletes ALL local branches (except main), checks out main, pulls latest |
+| `delete --all` | Deletes ALL local branches (except main), checks out main, pulls latest |
+
+## Error Handling
+
+| Scenario | Action |
+|----------|--------|
+| Branch already exists | Show error, suggest different name |
+| Invalid branch name | Show validation errors, suggest fix |
+| On main (for delete) | Block with error: "Cannot delete the main branch" |
+| Branch not found | Show error with list of available branches |
+| Dirty working tree | Warn user before proceeding |
