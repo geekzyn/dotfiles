@@ -20,23 +20,9 @@ Orchestrates: stage all → commit (follows `/commit` rules) → push to remote.
 
 ## Current Git State
 
-```bash
-!git branch --show-current
-```
-
-```bash
-!git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo "No upstream branch set"
-```
-
-```bash
-!git status --short
-```
-
-## Unpushed Commits
-
-```bash
-!git log @{u}..HEAD --oneline 2>/dev/null || echo "No upstream to compare"
-```
+- Current git status: !`git status`
+- Current branch: !`git branch --show-current`
+- Unpushed commits: !`git log @{u}..HEAD --oneline 2>/dev/null`
 
 ## User Input (optional commit message)
 
@@ -76,12 +62,3 @@ $ARGUMENTS
    - If no upstream: `git push -u origin <branch-name>`
 
 5. **Summary**: Show commit hash, files changed, suggest `/pr` for next step
-
-## Error Handling
-
-| Error | Action |
-|-------|--------|
-| On main branch | Block, suggest `/branch` |
-| Pre-commit hook fails | Show error, don't push |
-| Push rejected (non-fast-forward) | Suggest `/rebase` |
-| No upstream | Auto-set with `-u` flag |
