@@ -20,7 +20,6 @@ Create branches following the [Conventional Branch](https://conventional-branch.
 ```bash
 !git branch --show-current
 !git status --short
-!git branch -a --list 
 ```
 
 ## Conventional Branch Rules
