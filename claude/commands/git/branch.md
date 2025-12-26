@@ -17,10 +17,9 @@ Create branches following the [Conventional Branch](https://conventional-branch.
 
 ## Current Git State
 
-```bash
-!git branch --show-current
-!git status --short
-```
+- Current git status: !`git status`
+- Current git diff (staged and unstaged changes): !`git diff HEAD`
+- Current branch: !`git branch --show-current`
 
 ## Conventional Branch Rules
 

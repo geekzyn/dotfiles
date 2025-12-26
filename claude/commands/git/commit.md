@@ -17,37 +17,10 @@ Create commits following the [Conventional Commits](https://www.conventionalcomm
 
 ## Current Git State
 
-```bash
-!git branch --show-current
-```
-
-```bash
-!git status
-```
-
-## Staged Changes
-
-```bash
-!git diff --cached --stat
-```
-
-## Unstaged Changes
-
-```bash
-!git diff --stat
-```
-
-## Recent Commits (for style reference)
-
-```bash
-!git log --oneline -5
-```
-
-## Full Diff of All Changes
-
-```bash
-!git diff HEAD
-```
+- Current git status: !`git status`
+- Current git diff (staged and unstaged changes): !`git diff HEAD`
+- Current branch: !`git branch --show-current`
+- Recent commits: !`git log --oneline -10`
 
 ## Conventional Commit Format
 
