@@ -91,7 +91,7 @@ $ARGUMENTS
    - If user confirms, stage appropriate files with `git add`
    - Show what will be committed
 
-5. **Create the commit with -am arguments**:
+5. **Create the commit with -am (stage all and meesage) arguments THIS IS IMPPORTANT**:
    ```bash
    git commit -am "<message>"
    ```
