@@ -19,16 +19,8 @@ Create branches following the [Conventional Branch](https://conventional-branch.
 
 ```bash
 !git branch --show-current
-```
-
-```bash
 !git status --short
-```
-
-## Existing Branches
-
-```bash
-!git branch -a --list | head -20
+!git branch -a --list 
 ```
 
 ## Conventional Branch Rules
@@ -106,7 +98,6 @@ $ARGUMENTS
 
 3. **Validate the branch name**:
    - Check type is valid (feature, bugfix, hotfix, release, chore)
-   - Convert aliases: `feat` -> `feature`, `fix` -> `bugfix`
    - Ensure description is lowercase with hyphens
    - No consecutive, leading, or trailing hyphens
    - Convert spaces to hyphens, remove special characters
@@ -137,34 +128,3 @@ $ARGUMENTS
      ```
 
 7. **Output**: Confirm branch was created from which source branch and suggest next steps (e.g., "Use /commit after making changes")
-
-## Example Transformations
-
-### Create Mode
-
-| Input | Output |
-|-------|--------|
-| `feat user authentication` | `feature/user-authentication` |
-| `fix  login--bug` | `bugfix/login-bug` (cleaned) |
-| `feat/add-api` | `feature/add-api` (converted) |
-| `feature add pipeline` | `feature/add-pipeline` |
-| `bugfix header issue` | `bugfix/header-issue` |
-
-After branch name validation, user will be prompted to select source branch (current or main, unless already on main).
-
-### Delete Mode
-
-| Input | Action |
-|-------|--------|
-| `delete` | Deletes current branch, checks out main, pulls latest |
-| `delete --all` | Deletes ALL local branches (except main), checks out main, pulls latest |
-
-## Error Handling
-
-| Scenario | Action |
-|----------|--------|
-| Branch already exists | Show error, suggest different name |
-| Invalid branch name | Show validation errors, suggest fix |
-| On main (for delete) | Block with error: "Cannot delete the main branch" |
-| Branch not found | Show error with list of available branches |
-| Dirty working tree | Warn user before proceeding |
