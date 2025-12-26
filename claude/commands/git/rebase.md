@@ -151,26 +151,3 @@ Commits on branch: Y
 Your branch is now up-to-date with main.
 Next: Continue developing or /push your changes.
 ```
-
-## Error Handling
-
-| Scenario | Action |
-|----------|--------|
-| Dirty working tree | Stash first, pop after |
-| Conflicts during rebase | Stop, show files, guide resolution |
-| On main branch | Just pull --rebase |
-| No upstream main | Fetch origin first |
-| Stash pop conflicts | Inform user, suggest manual resolution |
-
-## Conflict Resolution Guidance
-
-When conflicts occur, provide file-specific advice:
-
-- **JSON files** (ADF pipelines): Be careful with JSON structure, validate after resolving
-- **YAML files** (pipelines, config): Watch indentation carefully
-- **SQL files**: Review logic changes carefully
-
-Remind user that after resolving:
-1. `git add <resolved-files>`
-2. `git rebase --continue`
-3. Or `/rebase --abort` to cancel
