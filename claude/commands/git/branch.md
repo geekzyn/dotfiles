@@ -7,7 +7,7 @@ allowed-tools:
   - Bash(git fetch:*)
   - Bash(git pull:*)
   - AskUserQuestion
-argument-hint: "[type/description], 'delete' to remove current branch, or 'delete --all' to remove all branches"
+argument-hint: "[type/description], 'delete' to remove current branch, or 'delete all' to remove all branches"
 model: haiku
 ---
 
@@ -47,7 +47,7 @@ $ARGUMENTS
 
 ### DELETE MODE
 
-**If arguments equal "delete --all"**:
+**If arguments equal "delete all"**:
 1. Fetch remote branches and prune deleted ones: `git fetch --prune`
 2. Checkout to main if not already there: `git checkout main`
 3. Pull latest changes: `git pull`
