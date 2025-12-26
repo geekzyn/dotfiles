@@ -87,11 +87,7 @@ $ARGUMENTS
    - If invalid, suggest corrections
    - If valid, proceed with commit
 
-4. **Stage changes if needed**:
-   - If user confirms, stage appropriate files with `git add`
-   - Show what will be committed
-
-5. **Create the commit with -am (stage all and meesage) arguments THIS IS IMPPORTANT**:
+4. **Create the commit (always use -am to stage and commit together)**:
    ```bash
    git commit -am "<message>"
    ```
