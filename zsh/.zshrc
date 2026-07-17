@@ -45,7 +45,7 @@ eval "$(zoxide init --cmd cd zsh)"
 #######################################################################
 #                            Custom alias                             #
 #######################################################################
-alias ls='ls -ls --color=auto'
+alias ls='gls -ls --hyperlink=auto --color=auto'
 
 . "$HOME/.local/bin/env"
 
