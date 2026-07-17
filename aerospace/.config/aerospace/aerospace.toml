@@ -87,7 +87,7 @@ cmd-alt-h = [] # Disable "hide others"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
+alt-enter = 'exec-and-forget open -n /Applications/kitty.app'
 alt-b = '''exec-and-forget osascript -e '
 tell application "Safari"
     make new document at end of documents
