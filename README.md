@@ -3,7 +3,7 @@
 Managed with [GNU Stow](https://www.gnu.org/software/stow/). Each top-level directory is a stow package mirroring its target layout under `$HOME`.
 
 ```sh
-cd ~/.dotfiles && stow zsh nvim starship wezterm aerospace kitty bin
+cd ~/.dotfiles && stow zsh nvim starship wezterm aerospace kitty scripts
 ```
 
 ln -s ~/.dotfiles/claude/commands ~/.claude
@@ -18,7 +18,7 @@ Two independent btop instances, both rendered by kitty:
 open -na kitty.app --args +kitten panel --edge=background -o background_opacity=0.2 -o background=black btop
 ```
 
-**2. Interactive overlay (toggle)**. A centred quick-access terminal for acting on processes (select, press `k` to kill). Configured in `kitty/.config/kitty/quick-access-terminal.conf`, toggled with `bin/bin/btop-toggle.sh`:
+**2. Interactive overlay (toggle)**. A centred quick-access terminal for acting on processes (select, press `k` to kill). Configured in `kitty/.config/kitty/quick-access-terminal.conf`, toggled with `scripts/bin/btop-toggle.sh` (stowed to `~/bin`):
 
 ```sh
 ~/bin/btop-toggle.sh   # first run starts the overlay, later runs toggle visibility
