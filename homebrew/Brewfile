@@ -8,6 +8,7 @@
 # brew "ripgrep"
 # brew "tree"
 # brew "stow"
+# brew "devcontainer"
 # brew "zoxide"
 # brew "google-chrome"
 # brew "jesseduffield/lazygit/lazygit"
@@ -18,3 +19,4 @@
 # cask "wezterm"
 # cask "docker"
 # cask "nikitabobko/tap/aerospace"
+# cask "claude-code"
