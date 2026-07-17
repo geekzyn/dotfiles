@@ -75,7 +75,7 @@ format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
 # Workspace only: showing $version runs `terraform version` on every prompt
 symbol = "󱁢"
 style = "bg:#212736"
-format = '[[ $symbol $workspace](fg:#769ff0 bg:#212736)]($style)'
+format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
 
 [azure]
 disabled = false
