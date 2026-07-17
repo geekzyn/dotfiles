@@ -18,16 +18,16 @@ Two independent btop instances, both rendered by kitty:
 open -na kitty.app --args +kitten panel --edge=background -o background_opacity=0.2 -o background=black btop
 ```
 
-**2. Interactive overlay (toggle)**. A centred quick-access terminal for acting on processes (select, press `k` to kill). Configured in `kitty/.config/kitty/quick-access-terminal.conf`, toggled with `scripts/bin/btop-toggle.sh` (stowed to `~/bin`):
+**2. Interactive overlay (toggle)**. A centred quick-access terminal for acting on processes (select, press `k` to kill). Configured in `kitty/.config/kitty/quick-access-terminal.conf`, toggled with `scripts/.local/scripts/btop-toggle.sh` (stowed to `~/.local/scripts`):
 
 ```sh
-~/bin/btop-toggle.sh   # first run starts the overlay, later runs toggle visibility
+~/.local/scripts/btop-toggle.sh   # first run starts the overlay, later runs toggle visibility
 ```
 
 Notes:
 - The script invokes the kitten binary directly. Launching via `open -na kitty.app` fails silently while the wallpaper panel occupies the kitty-quick-access helper app
 - `hide_on_focus_loss yes` dismisses the overlay when it loses focus
-- The script carries Raycast metadata: add `~/bin` as a Script Command directory in Raycast and assign a hotkey to "Toggle btop overlay"
+- The script carries Raycast metadata: add `~/.local/scripts` as a Script Command directory in Raycast and assign a hotkey to "Toggle btop overlay"
 
 After a reboot:
 - Overlay: nothing to do. The toggle script is self-healing; the first hotkey press starts a fresh overlay, later presses toggle it. Do not set `start_as_hidden yes` in the conf, or the first press would start it invisible and need a second press
