@@ -11,7 +11,6 @@ $php\
 $lua\
 $python\
 $terraform\
-$azure\
 [](fg:#212736 bg:#1d2230))\
 $cmd_duration\
 $time\
@@ -76,13 +75,6 @@ format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
 symbol = "󱁢"
 style = "bg:#212736"
 format = '[[ $symbol ](fg:#769ff0 bg:#212736)]($style)'
-
-[azure]
-disabled = false
-symbol = "󰠅"
-style = "bg:#212736"
-format = '[[ $symbol ($subscription)](fg:#769ff0 bg:#212736)]($style)'
-# subscription_aliases = { very-long-subscription-name = "vlsn" }
 
 [cmd_duration]
 min_time = 2000
