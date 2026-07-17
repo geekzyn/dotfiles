@@ -94,6 +94,8 @@ tell application "Safari"
     activate
 end tell'
 '''
+# Toggle centred btop overlay via the shared script (also a Raycast command)
+cmd-shift-b = 'exec-and-forget /Users/abdelalizyn/.local/scripts/btop-toggle.sh'
 # override efaults in macOS
 # cmd = 'close'
 # cmd-m = 'macos-native-minimize'
