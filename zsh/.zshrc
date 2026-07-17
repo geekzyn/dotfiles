@@ -42,10 +42,6 @@ source <(fzf --zsh)
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-# terraform autocompletion
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
 #######################################################################
 #                            Custom alias                             #
 #######################################################################
