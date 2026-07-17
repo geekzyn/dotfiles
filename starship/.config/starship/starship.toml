@@ -1,7 +1,7 @@
 format = """
 $directory\
 [](fg:#769ff0 bg:#394260)\
-($git_branch\
+$git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
 $nodejs\
@@ -11,7 +11,7 @@ $php\
 $lua\
 $python\
 $terraform\
-[](fg:#212736 bg:#1d2230))\
+[](fg:#212736 bg:#1d2230)\
 $cmd_duration\
 $time\
 [ ](fg:#1d2230)\
