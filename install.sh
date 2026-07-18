@@ -1,19 +1,7 @@
 #!/bin/sh
 
-
-install_zsh() {
-  if command -v zsh &> /dev/null; then
-    echo "Oh My Zsh is already installed."
-  else
-    echo "Installing Oh My Zsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    echo "Setting /bin/zsh as the default shell..."
-    chsh -s $(which zsh)
-  fi
-}
-
 install_brew() {
-  if command -v brew &> /dev/null; then
+  if command -v brew >/dev/null 2>&1; then
     echo "Homebrew is already installed."
   else
     echo "Installing Homebrew..."
@@ -24,8 +12,8 @@ install_brew() {
   fi
 }
 
-# remove message of the day prompt
-# touch $HOME/.hushlogin
+# ensure Homebrew exists before anything below uses it
+install_brew
 
 brew update && brew bundle --file=~/.dotfiles/homebrew/Brewfile
 
@@ -34,6 +22,3 @@ mise install
 
 # make the uv-managed python the global default (python/python3 in ~/.local/bin)
 uv python install --default
-
-# install_zsh
-# install_brew
