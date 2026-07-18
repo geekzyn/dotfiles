@@ -51,6 +51,3 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 alias ls='gls -ls --hyperlink=auto --color=auto'
 
 . "$HOME/.local/bin/env"
-
-# openjdk
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
