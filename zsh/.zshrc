@@ -42,6 +42,9 @@ source <(fzf --zsh)
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
+# mise
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+
 #######################################################################
 #                            Custom alias                             #
 #######################################################################
@@ -58,6 +61,3 @@ esac
 
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
-# mise
-eval "$(/opt/homebrew/bin/mise activate zsh)"
