@@ -55,12 +55,9 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
 
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-# openjdk end
 
 # mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
-# mise end
