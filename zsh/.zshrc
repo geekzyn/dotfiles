@@ -53,4 +53,3 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 #                            Custom alias                             #
 #######################################################################
 alias ls='gls -ls --hyperlink=auto --color=auto'
-
