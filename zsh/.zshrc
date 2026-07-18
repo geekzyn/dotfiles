@@ -60,3 +60,7 @@ esac
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # openjdk end
+
+# mise
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+# mise end
