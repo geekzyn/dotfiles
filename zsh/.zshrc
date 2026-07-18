@@ -52,12 +52,5 @@ alias ls='gls -ls --hyperlink=auto --color=auto'
 
 . "$HOME/.local/bin/env"
 
-# pnpm
-export PNPM_HOME="/Users/abdelalizyn/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
 # openjdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
