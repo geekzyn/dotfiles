@@ -29,5 +29,11 @@ install_brew() {
 
 brew update && brew bundle --file=~/.dotfiles/homebrew/Brewfile
 
+# install global tools from ~/.config/mise/config.toml (uv, ...)
+mise install
+
+# make the uv-managed python the global default (python/python3 in ~/.local/bin)
+uv python install --default
+
 # install_zsh
 # install_brew
