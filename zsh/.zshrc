@@ -46,10 +46,13 @@ source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 
 # carapace-bin
-autoload -U compinit && compinit
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
+
+# inshellisense: IDE-style inline autocomplete, sourced from carapace
+# specs via the CARAPACE_BRIDGES=inshellisense entry above
+source <(is init zsh)
 
 # mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
@@ -68,12 +71,4 @@ alias ls='gls -ls --hyperlink=auto --color=auto'
 llm() {
   aichat -e "$*"
 }
-
-#######################################################################
-#                           Shell plugins                             #
-#######################################################################
-# inshellisense: IDE-style inline autocomplete, sourced from carapace
-# specs via the CARAPACE_BRIDGES=inshellisense entry set above.
-# Must stay the last command in this file (per inshellisense docs).
-[[ -f ~/.inshellisense/init/zsh/init.zsh ]] && source ~/.inshellisense/init/zsh/init.zsh
 
