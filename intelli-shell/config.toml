@@ -1,0 +1,22 @@
+# intelli-shell configuration
+# Only overrides are listed here; everything else uses built-in defaults.
+
+[ai]
+# Turn on AI-powered features: --ai completion/command suggestions, fix, import
+enabled = true
+
+# Local Ollama model (no API key needed; served at http://localhost:11434 by default)
+# qwen2.5-coder:3b: GGUF coder model, honours ollama's JSON enforcement, low latency.
+# gemma4:12b-mlx is unsuitable here: the MLX backend ignores format enforcement and
+# wraps JSON in code fences, which intelli-shell cannot parse.
+[ai.catalog.ollama]
+provider = "ollama"
+model = "qwen2.5-coder:3b"
+
+# Route every AI task through the local model
+[ai.models]
+suggest = "ollama"
+fix = "ollama"
+import = "ollama"
+completion = "ollama"
+fallback = "ollama"
