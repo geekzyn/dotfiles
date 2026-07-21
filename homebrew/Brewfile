@@ -20,9 +20,11 @@ brew "neovim"
 brew "node"
 brew "mise"
 brew "ollama"
+brew "aichat"
 brew "jesseduffield/lazygit/lazygit"
 cask "visual-studio-code"
 cask "claude-code"
+cask "taproom"
 
 # ── Containers ───────────────────────────────────────
 cask "docker"
@@ -30,7 +32,6 @@ brew "devcontainer"
 
 # ── Terminal & window management ─────────────────────
 cask "kitty"
-cask "wezterm"
 cask "nikitabobko/tap/aerospace"
 cask "raycast"
 
