@@ -39,11 +39,21 @@ eval "$(starship init zsh)"
 # aichat
 export AICHAT_CONFIG_DIR=~/.config/aichat
 
-# Set up fzf key bindings and fuzzy completion
+# fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# Zoxide
+# zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# carapace-bin
+autoload -U compinit && compinit
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
+# intelli-shell: shell integration + completions
+# Search: ctrl+space | Bookmark: ctrl+b | Variables: ctrl+l | Fix: ctrl+x
+eval "$(intelli-shell init zsh)"
 
 # mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
@@ -62,3 +72,4 @@ alias ls='gls -ls --hyperlink=auto --color=auto'
 llm() {
   aichat -e "$*"
 }
+

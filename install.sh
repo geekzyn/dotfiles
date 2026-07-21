@@ -22,3 +22,11 @@ mise install
 
 # make the uv-managed python the global default (python/python3 in ~/.local/bin)
 uv python install --default
+
+# use the repo's tracked git hooks (keeps the intelli-shell export in sync on commit)
+git -C "$HOME/.dotfiles" config core.hooksPath .githooks
+
+# restore the intelli-shell command library and dynamic completions
+if command -v intelli-shell >/dev/null 2>&1 && [ -f "$HOME/.dotfiles/intelli-shell/commands.bak" ]; then
+  intelli-shell import "$HOME/.dotfiles/intelli-shell/commands.bak"
+fi

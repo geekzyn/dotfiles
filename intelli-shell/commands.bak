@@ -1,0 +1,1 @@
+$ (ollama) model: ollama list | tail -n +2 | awk '{print $1}'
