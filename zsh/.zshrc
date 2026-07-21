@@ -50,10 +50,6 @@ export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
 
-# inshellisense: IDE-style inline autocomplete, sourced from carapace
-# specs via the CARAPACE_BRIDGES=inshellisense entry above
-source <(is init zsh)
-
 # mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
@@ -72,3 +68,6 @@ llm() {
   aichat -e "$*"
 }
 
+# inshellisense: IDE-style inline autocomplete, sourced from carapace
+# specs via the CARAPACE_BRIDGES=inshellisense entry above
+source <(is init zsh)
