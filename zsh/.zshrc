@@ -56,3 +56,9 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 #                            Custom alias                             #
 #######################################################################
 alias ls='gls -ls --hyperlink=auto --color=auto'
+
+# llm: pass a natural-language request to aichat execute mode
+# e.g. llm list my files
+llm() {
+  aichat -e "$*"
+}
