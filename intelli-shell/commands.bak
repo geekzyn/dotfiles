@@ -1,1 +1,5 @@
+$ (docker) container: docker ps -a | tail -n +2 | awk '{print $NF}'
+$ (docker) image: docker images 2>/dev/null | awk 'NR>1 && $1 ~ /:/ {print $1}'
+$ (git) branch: git branch --format='%(refname:short)'
+$ (git) branch_name: git branch --format='%(refname:short)'
 $ (ollama) model: ollama list | tail -n +2 | awk '{print $1}'
