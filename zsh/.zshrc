@@ -36,6 +36,9 @@ bindkey '^[[B' history-search-forward
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
+# aichat
+export AICHAT_CONFIG_DIR=~/.config/aichat
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
