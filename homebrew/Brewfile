@@ -1,47 +1,47 @@
 # ── Taps ─────────────────────────────────────────────
-tap "jesseduffield/lazygit"
-tap "nikitabobko/tap"
+tap "jesseduffield/lazygit"                   # source for the lazygit formula
+tap "nikitabobko/tap"                         # source for the aerospace formula
 
 # ── Core CLI utilities ───────────────────────────────
-brew "coreutils"
-brew "fzf"
-brew "ripgrep"
-brew "tree"
-brew "stow"
-brew "zoxide"
+brew "coreutils"                              # GNU versions of core Unix commands (ls, cp, etc)
+brew "fzf"                                    # fuzzy finder for files, history and more
+brew "ripgrep"                                # fast recursive text search (rg)
+brew "tree"                                   # print directory contents as a tree
+brew "stow"                                   # symlink manager for dotfiles
+brew "zoxide"                                 # smarter cd that learns your habits
 
 # ── Shell & prompt ───────────────────────────────────
-brew "starship"
-brew "zsh-syntax-highlighting"
-brew "zsh-autosuggestions"
+brew "starship"                               # cross-shell prompt
+brew "zsh-syntax-highlighting"                # highlight commands as you type in zsh
+brew "zsh-autosuggestions"                    # suggest commands from history as you type
 
 # ── Development ──────────────────────────────────────
-brew "neovim"
-brew "node"
-brew "mise"
-brew "ollama"
-brew "aichat"
-brew "jesseduffield/lazygit/lazygit"
-cask "visual-studio-code"
-cask "claude-code"
-cask "taproom"
+brew "neovim"                                 # modern Vim-based text editor
+brew "node"                                   # Node.js runtime and npm
+brew "mise"                                   # dev tool version manager (asdf replacement)
+brew "ollama"                                 # run large language models locally
+brew "aichat"                                 # LLM chat and tools from the terminal
+brew "jesseduffield/lazygit/lazygit"          # terminal UI for git
+cask "visual-studio-code"                     # code editor
+cask "claude-code"                            # Anthropic's CLI coding agent
+cask "taproom"                                # GUI to browse and manage Homebrew packages
 
 # ── Containers ───────────────────────────────────────
-cask "docker"
-brew "devcontainer"
+cask "docker"                                 # container runtime and Desktop app
+brew "devcontainer"                           # CLI to run VS Code dev containers
 
 # ── Terminal & window management ─────────────────────
-cask "kitty"
-cask "nikitabobko/tap/aerospace"
-cask "raycast"
+cask "kitty"                                  # GPU-accelerated terminal emulator
+cask "nikitabobko/tap/aerospace"              # tiling window manager for macOS
+cask "raycast"                                # launcher and productivity tool
 
 # ── Fonts ────────────────────────────────────────────
-cask "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"          # monospaced font with programming glyphs
 
 # ── Browsers ─────────────────────────────────────────
-cask "google-chrome"
+cask "google-chrome"                          # web browser
 
 # ── Productivity & communication ─────────────────────
-cask "obsidian"
-cask "microsoft-teams"
-cask "microsoft-outlook"
+cask "obsidian"                               # markdown note-taking app
+cask "microsoft-teams"                        # team chat and video calls
+cask "microsoft-outlook"                      # email and calendar client
