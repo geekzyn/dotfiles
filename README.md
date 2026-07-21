@@ -8,6 +8,8 @@ cd ~/.dotfiles && stow zsh nvim starship wezterm aerospace kitty scripts
 
 ln -s ~/.dotfiles/claude/commands ~/.claude
 
+`intelli-shell` is not stowed: its config lives under `~/Library/Application Support` on macOS and `commands.bak` is a data file, not a `$HOME` symlink. `install.sh` links the config, pulls the local AI model (`qwen2.5-coder:3b`), and imports the command library and dynamic completions. The pre-commit hook keeps `intelli-shell/commands.bak` in sync.
+
 ## kitty: btop wallpaper and quick-access overlay
 
 Two independent btop instances, both rendered by kitty:
