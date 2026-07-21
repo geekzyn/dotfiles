@@ -1,9 +1,9 @@
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
 
-model: ollama:gemma4:12b-mlx
+model: ollama:qwen2.5-coder:3b
 clients:
 - type: openai-compatible
   name: ollama
   api_base: http://localhost:11434/v1
   models:
-  - name: gemma4:12b-mlx
+  - name: qwen2.5-coder:3b
