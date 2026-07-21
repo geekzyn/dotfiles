@@ -22,24 +22,3 @@ mise install
 
 # make the uv-managed python the global default (python/python3 in ~/.local/bin)
 uv python install --default
-
-# use the repo's tracked git hooks (keeps the intelli-shell export in sync on commit)
-git -C "$HOME/.dotfiles" config core.hooksPath .githooks
-
-# intelli-shell: link the config, pull its local AI model, restore the command library
-if command -v intelli-shell >/dev/null 2>&1; then
-  # symlink config.toml into the macOS app-support path (no env var can relocate it)
-  is_config_dir="$HOME/Library/Application Support/org.IntelliShell.Intelli-Shell"
-  mkdir -p "$is_config_dir"
-  ln -sf "$HOME/.dotfiles/intelli-shell/config.toml" "$is_config_dir/config.toml"
-
-  # local model used by intelli-shell's AI features (see intelli-shell/config.toml)
-  if command -v ollama >/dev/null 2>&1; then
-    ollama pull qwen2.5-coder:3b
-  fi
-
-  # restore bookmarked commands and dynamic completions
-  if [ -f "$HOME/.dotfiles/intelli-shell/commands.bak" ]; then
-    intelli-shell import "$HOME/.dotfiles/intelli-shell/commands.bak"
-  fi
-fi

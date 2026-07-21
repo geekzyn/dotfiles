@@ -14,7 +14,6 @@ brew "zoxide"                                 # smarter cd that learns your habi
 brew "starship"                               # cross-shell prompt
 brew "zsh-syntax-highlighting"                # highlight commands as you type in zsh
 brew "zsh-autosuggestions"                    # suggest commands from history as you type
-brew "intelli-shell"                          # searchable command library with dynamic completions
 
 # ── Development ──────────────────────────────────────
 brew "neovim"                                 # modern Vim-based text editor
