@@ -1,6 +1,7 @@
 # ── Taps ─────────────────────────────────────────────
 tap "jesseduffield/lazygit"                   # source for the lazygit formula
 tap "nikitabobko/tap"                         # source for the aerospace formula
+tap "microsoft/inshellisense", "https://github.com/microsoft/inshellisense"  # source for inshellisense
 
 # ── Core CLI utilities ───────────────────────────────
 brew "coreutils"                              # GNU versions of core Unix commands (ls, cp, etc)
@@ -14,6 +15,8 @@ brew "zoxide"                                 # smarter cd that learns your habi
 brew "starship"                               # cross-shell prompt
 brew "zsh-syntax-highlighting"                # highlight commands as you type in zsh
 brew "zsh-autosuggestions"                    # suggest commands from history as you type
+brew "carapace"                               # multi-shell completion engine (carapace-bin)
+brew "microsoft/inshellisense/inshellisense"  # IDE-style inline autocomplete (feeds from carapace)
 
 # ── Development ──────────────────────────────────────
 brew "neovim"                                 # modern Vim-based text editor

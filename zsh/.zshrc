@@ -69,3 +69,11 @@ llm() {
   aichat -e "$*"
 }
 
+#######################################################################
+#                           Shell plugins                             #
+#######################################################################
+# inshellisense: IDE-style inline autocomplete, sourced from carapace
+# specs via the CARAPACE_BRIDGES=inshellisense entry set above.
+# Must stay the last command in this file (per inshellisense docs).
+[[ -f ~/.inshellisense/init/zsh/init.zsh ]] && source ~/.inshellisense/init/zsh/init.zsh
+
