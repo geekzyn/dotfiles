@@ -1,17 +1,108 @@
 {
-    "python.analysis.extraPaths": [
+    // ─── Workbench ────────────────────────────────────────────────────────────
+    "workbench.editor.showTabs": "single", // Show a single editor tab instead of a row of tabs
+    "workbench.statusBar.visible": true, // Show the status bar at the bottom of the window
+    "workbench.startupEditor": "none", // Open no editor on startup (blank screen)
+    "workbench.tree.renderIndentGuides": "none", // Hide indentation guide lines in the explorer tree
+    "workbench.editor.editorActionsLocation": "titleBar", // Put editor action buttons in the title bar
+    "workbench.colorCustomizations": {}, // Editor colour overrides (none)
+    "workbench.secondarySideBar.defaultVisibility": "hidden", // Hide the secondary (right) side bar by default
+    // ─── Editor ───────────────────────────────────────────────────────────────
+    "editor.minimap.enabled": false, // Disable the minimap (code overview)
+    "editor.guides.indentation": true, // Draw vertical indentation guide lines
+    "editor.renderWhitespace": "none", // Do not render whitespace characters
+    "editor.lineNumbers": "on", // Show line numbers in the gutter
+    "editor.renderLineHighlight": "line", // Highlight only the current line
+    "editor.lightbulb.enabled": "off", // Disable the quick-fix lightbulb indicator
+    "editor.hover.enabled": "on", // Enable hover tooltips (type info, docs)
+    "editor.showFoldingControls": "mouseover", // Show folding controls only on gutter hover
+    "editor.scrollbar.horizontal": "hidden", // Hide the horizontal scrollbar
+    "editor.scrollbar.vertical": "hidden", // Hide the vertical scrollbar
+    "editor.overviewRulerBorder": false, // Remove the border around the overview ruler
+    "editor.cursorBlinking": "solid", // Keep the cursor solid instead of blinking
+    "editor.cursorSmoothCaretAnimation": "on", // Animate the cursor smoothly when it moves
+    "editor.tabSize": 2, // A tab equals 2 spaces
+    "editor.detectIndentation": true, // Auto-detect a file's indentation on open
+    "editor.fontFamily": "JetBrainsMono Nerd Font", // Editor font
+    "editor.fontSize": 12, // Editor font size in pixels
+    "editor.fontLigatures": true, // Enable font ligatures (=>, !=, etc.)
+    "editor.experimentalGpuAcceleration": "on", // Use GPU acceleration for editor rendering
+    // ─── Breadcrumbs ──────────────────────────────────────────────────────────
+    "breadcrumbs.enabled": false, // Hide the breadcrumbs bar below the tabs
+    // ─── Explorer ─────────────────────────────────────────────────────────────
+    "explorer.confirmDragAndDrop": false, // No confirmation prompt on drag and drop
+    "explorer.confirmDelete": true, // Prompt for confirmation before deleting files
+    "explorer.compactFolders": false, // Show nested single-child folders separately
+    "explorer.decorations.colors": false, // Do not colour file names by status
+    // ─── Files ────────────────────────────────────────────────────────────────
+    "files.insertFinalNewline": true, // Insert a final newline at end of file on save
+    "files.autoSave": "afterDelay", // Auto-save files after a short delay
+    "files.associations": { // Force certain globs to a language
+        "*.yml": "yaml"
+    },
+    // ─── Source control / Git ─────────────────────────────────────────────────
+    "scm.diffDecorations": "all", // Show diff decorations in gutter, ruler and minimap
+    "git.decorations.enabled": true, // Show Git status decorations on files
+    "git.openRepositoryInParentFolders": "always", // Open a nested repo's parent repo automatically
+    "git.autofetch": true, // Periodically fetch from remotes in the background
+    // ─── Window ───────────────────────────────────────────────────────────────
+    "window.title": " ", // Blank window title
+    "window.commandCenter": false, // Hide the command center in the title bar
+    // ─── Diff editor ──────────────────────────────────────────────────────────
+    "diffEditor.ignoreTrimWhitespace": false, // Do not ignore trimmed whitespace in diffs
+    // ─── Security ─────────────────────────────────────────────────────────────
+    "security.workspace.trust.untrustedFiles": "open", // Open untrusted files normally
+    // ─── Remote ───────────────────────────────────────────────────────────────
+    "remote.autoForwardPortsSource": "hybrid", // Source of ports to auto-forward in remote sessions
+    // ─── Makefile ─────────────────────────────────────────────────────────────
+    "makefile.configureOnOpen": true, // Configure the Makefile when a workspace opens
+    // ─── Python ───────────────────────────────────────────────────────────────
+    "python.analysis.extraPaths": [ // Extra folders added to the import/analysis path
         "src",
         "lib",
         "resources"
     ],
-    "claudeCode.preferredLocation": "panel",
-    "editor.experimentalGpuAcceleration": "on",
-    "terminal.integrated.enableImages": true,
-    "terminal.integrated.env.osx": {
-        "ISTERM": null,
-        "ISTERM_LOGIN": null
+    // ─── Terminal ─────────────────────────────────────────────────────────────
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font", // Terminal font
+    "terminal.integrated.fontSize": 12, // Terminal font size in pixels
+    "terminal.integrated.tabs.location": "left", // Place terminal tabs on the left of the panel
+    "terminal.integrated.defaultProfile.linux": "bash", // Default shell profile on Linux
+    "terminal.integrated.shellIntegration.enabled": true, // Enable shell integration (command tracking)
+    "terminal.integrated.suggest.enabled": true, // Enable inline command suggestions
+    "terminal.integrated.suggest.quickSuggestions": { // Trigger suggestions automatically as you type
+        "commands": "on", // Suggest command names
+        "arguments": "on", // Suggest command arguments and flags
+        "unknown": "off" // Do not suggest for unrecognised input
     },
-    "extensions.experimental.affinity": {
+    "terminal.integrated.enableImages": true, // Allow images to render in the terminal
+    "terminal.integrated.env.osx": { // Environment variables set for macOS terminals
+        "ISTERM": null, // Unset ISTERM
+        "ISTERM_LOGIN": null // Unset ISTERM_LOGIN
+    },
+    "terminal.external.osxExec": "kitty.app", // External terminal app on macOS
+    "terminal.integrated.profiles.linux": { // Available shell profiles on Linux
+        "bash": {
+            "path": "/bin/bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    // ─── Extensions ───────────────────────────────────────────────────────────
+    "extensions.experimental.affinity": { // Pin extensions to a dedicated extension host process
         "asvetliakov.vscode-neovim": 1
-    }
+    },
+    // ─── Claude Code ──────────────────────────────────────────────────────────
+    "claudeCode.preferredLocation": "panel" // Open Claude Code in the bottom panel
 }
