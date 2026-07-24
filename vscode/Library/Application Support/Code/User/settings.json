@@ -1,0 +1,14 @@
+{
+    "python.analysis.extraPaths": [
+        "src",
+        "lib",
+        "resources"
+    ],
+    "claudeCode.preferredLocation": "panel",
+    "editor.experimentalGpuAcceleration": "on",
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.env.osx": {
+        "ISTERM": null,
+        "ISTERM_LOGIN": null
+    }
+}
