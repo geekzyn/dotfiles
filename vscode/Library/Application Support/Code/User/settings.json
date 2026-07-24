@@ -56,12 +56,6 @@
     "remote.autoForwardPortsSource": "hybrid", // Source of ports to auto-forward in remote sessions
     // ─── Makefile ─────────────────────────────────────────────────────────────
     "makefile.configureOnOpen": true, // Configure the Makefile when a workspace opens
-    // ─── Python ───────────────────────────────────────────────────────────────
-    "python.analysis.extraPaths": [ // Extra folders added to the import/analysis path
-        "src",
-        "lib",
-        "resources"
-    ],
     // ─── Terminal ─────────────────────────────────────────────────────────────
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font", // Terminal font
     "terminal.integrated.fontSize": 12, // Terminal font size in pixels
