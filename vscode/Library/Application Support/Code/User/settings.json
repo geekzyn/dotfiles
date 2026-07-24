@@ -110,4 +110,5 @@
     "lib",
     "resources"
   ],
+  "workbench.activityBar.location": "hidden",
 }
