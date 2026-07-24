@@ -10,5 +10,8 @@
     "terminal.integrated.env.osx": {
         "ISTERM": null,
         "ISTERM_LOGIN": null
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
     }
 }
