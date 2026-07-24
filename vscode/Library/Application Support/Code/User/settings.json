@@ -25,8 +25,7 @@
   "editor.detectIndentation": true, // Auto-detect a file's indentation on open
   "editor.fontFamily": "JetBrainsMono Nerd Font", // Editor font
   "editor.fontSize": 12, // Editor font size in pixels
-  "editor.fontLigatures": true, // Enable font ligatures (=>, !=, etc.)
-  "editor.experimentalGpuAcceleration": "on", // Use GPU acceleration for editor rendering
+  "editor.fontLigatures": true, // Use GPU acceleration for editor rendering
   // ─── Breadcrumbs ──────────────────────────────────────────────────────────
   "breadcrumbs.enabled": false, // Hide the breadcrumbs bar below the tabs
   // ─── Explorer ─────────────────────────────────────────────────────────────
@@ -105,10 +104,6 @@
   // ─── Claude Code ──────────────────────────────────────────────────────────
   "claudeCode.preferredLocation": "panel", // Open Claude Code in the bottom panel,
   "chat.titleBar.openInAgentsWindow.enabled": false,
-  "python.analysis.extraPaths": [
-    "src",
-    "lib",
-    "resources"
-  ],
+  "python.analysis.extraPaths": ["src", "lib", "resources"],
   "workbench.activityBar.location": "hidden",
 }
