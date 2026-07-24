@@ -69,5 +69,11 @@ llm() {
 }
 
 # inshellisense: IDE-style inline autocomplete, sourced from carapace
-# specs via the CARAPACE_BRIDGES=inshellisense entry above
-source <(is init zsh)
+# specs via the CARAPACE_BRIDGES=inshellisense entry above.
+# Only start it in a real interactive terminal (stdout is a TTY). During
+# non-interactive env capture (e.g. VSCode resolving the shell environment
+# when launched from Spotlight/Dock), stdout is a pipe, so this is skipped
+# and the shell does not hang.
+if [[ -o interactive && -t 1 ]]; then
+  source <(is init zsh)
+fi
