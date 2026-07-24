@@ -3,7 +3,7 @@
 Managed with [GNU Stow](https://www.gnu.org/software/stow/). Each top-level directory is a stow package mirroring its target layout under `$HOME`.
 
 ```sh
-cd ~/.dotfiles && stow zsh nvim starship wezterm aerospace kitty scripts
+cd ~/.dotfiles && stow zsh nvim starship wezterm aerospace kitty scripts vscode
 ```
 
 ln -s ~/.dotfiles/claude/commands ~/.claude
