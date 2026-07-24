@@ -104,5 +104,6 @@
         "asvetliakov.vscode-neovim": 1
     },
     // ─── Claude Code ──────────────────────────────────────────────────────────
-    "claudeCode.preferredLocation": "panel" // Open Claude Code in the bottom panel
+    "claudeCode.preferredLocation": "panel", // Open Claude Code in the bottom panel,
+    "chat.titleBar.openInAgentsWindow.enabled": false
 }
