@@ -104,6 +104,10 @@
   // ─── Claude Code ──────────────────────────────────────────────────────────
   "claudeCode.preferredLocation": "panel", // Open Claude Code in the bottom panel,
   "chat.titleBar.openInAgentsWindow.enabled": false,
-  "python.analysis.extraPaths": ["src", "lib", "resources"],
+  "python.analysis.extraPaths": [
+    "src",
+    "lib",
+    "resources"
+  ],
   "workbench.activityBar.location": "hidden",
 }
