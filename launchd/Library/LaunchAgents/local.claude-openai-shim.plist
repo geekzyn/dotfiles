@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Keeps the OpenAI-compatible Claude Code shim running for aichat.
+     launchd does not expand ~, so the paths below are absolute. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>local.claude-openai-shim</string>
+
+  <!-- the uv-managed default python, the same one install.sh sets up.
+       `python` rather than `python3`: only uv provides the unversioned name,
+       so it cannot be confused with the Homebrew or system interpreter. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/abdelalizyn/.local/bin/python</string>
+    <string>/Users/abdelalizyn/.local/scripts/claude-openai-shim.py</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/Users/abdelalizyn/.local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+    <key>CLAUDE_SHIM_ADDR</key>
+    <string>127.0.0.1:8317</string>
+    <key>CLAUDE_SHIM_MODEL</key>
+    <string>haiku</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ProcessType</key>
+  <string>Background</string>
+
+  <key>StandardOutPath</key>
+  <string>/Users/abdelalizyn/Library/Logs/claude-openai-shim.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/abdelalizyn/Library/Logs/claude-openai-shim.log</string>
+</dict>
+</plist>

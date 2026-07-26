@@ -1,7 +1,26 @@
 # see https://github.com/sigoden/aichat/blob/main/config.example.yaml
 
-model: ollama:qwen2.5-coder:7b
+# claude-code is the local shim in scripts/.local/scripts/claude-openai-shim.py:
+# it speaks the OpenAI API and runs each request through `claude -p`, so the
+# Claude Pro/Max subscription pays for it and no API key is involved.
+model: claude-code:haiku
+
 clients:
+- type: openai-compatible
+  name: claude-code
+  api_base: http://localhost:8317/v1
+  api_key: not-used
+  models:
+  - name: haiku
+    max_input_tokens: 200000
+    max_output_tokens: 64000
+  - name: sonnet
+    max_input_tokens: 200000
+    max_output_tokens: 64000
+  - name: opus
+    max_input_tokens: 200000
+    max_output_tokens: 64000
+
 - type: openai-compatible
   name: ollama
   api_base: http://localhost:11434/v1

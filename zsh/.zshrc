@@ -62,8 +62,9 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 #######################################################################
 alias ls='gls -ls --hyperlink=auto --color=auto'
 
-# llm: pass a natural-language request to aichat execute mode
-# e.g. llm list my files
+# llm: pass a natural-language request to aichat execute mode, which now runs
+# on the Claude subscription through the local shim (see README)
+# e.g. llm list my files sorted by size
 llm() {
   aichat -e "$*"
 }
