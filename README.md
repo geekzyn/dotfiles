@@ -8,6 +8,20 @@ cd ~/.dotfiles && stow zsh nvim starship wezterm aerospace kitty scripts vscode
 
 ln -s ~/.dotfiles/claude/commands ~/.claude
 
+## Claude Code
+
+Installed with the native installer, not the Homebrew cask, so it auto-updates in the background and picks up new models as they ship. The `claude-code` cask tracks the stable channel, lags roughly a week and never auto-updates (source: Anthropic, "Quickstart", Claude Code documentation, accessed 26 July 2026).
+
+`install.sh` runs this if `~/.local/bin/claude` is absent:
+
+```sh
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Layout: versions land in `~/.local/share/claude/versions/<version>`, with `~/.local/bin/claude` symlinked to the active one. `~/.local/bin` is already on PATH via the `~/.local/bin/env` shim sourced in `zsh/.zshrc`, so no extra PATH entry is needed.
+
+Check the running version with `claude --version`, or `claude update` to pull an update immediately.
+
 ## kitty: btop wallpaper and quick-access overlay
 
 Two independent btop instances, both rendered by kitty:

@@ -26,7 +26,6 @@ brew "ollama"                                 # run large language models locall
 brew "aichat"                                 # LLM chat and tools from the terminal
 brew "jesseduffield/lazygit/lazygit"          # terminal UI for git
 cask "visual-studio-code"                     # code editor
-cask "claude-code"                            # Anthropic's CLI coding agent
 cask "taproom"                                # GUI to browse and manage Homebrew packages
 
 # ── Containers ───────────────────────────────────────

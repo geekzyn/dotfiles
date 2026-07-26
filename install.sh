@@ -12,10 +12,26 @@ install_brew() {
   fi
 }
 
+# Claude Code, native install. Deliberately not a Homebrew cask: the native
+# binary auto-updates in the background, so new models and features land
+# without a manual upgrade. Installs to ~/.local/share/claude/versions/<ver>
+# and symlinks ~/.local/bin/claude, already on PATH via the ~/.local/bin/env
+# shim sourced in zsh/.zshrc.
+install_claude_code() {
+  if [ -x "$HOME/.local/bin/claude" ]; then
+    echo "Claude Code is already installed ($("$HOME/.local/bin/claude" --version))."
+  else
+    echo "Installing Claude Code..."
+    curl -fsSL https://claude.ai/install.sh | bash
+  fi
+}
+
 # ensure Homebrew exists before anything below uses it
 install_brew
 
 brew update && brew bundle --file=~/.dotfiles/homebrew/Brewfile
+
+install_claude_code
 
 # install global tools from ~/.config/mise/config.toml (uv, ...)
 mise install
