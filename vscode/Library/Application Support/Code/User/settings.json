@@ -113,27 +113,6 @@
   "data-size-count.statusBar.regexCount": [
     // Each entry counts regex matches in the active file, use ${matchCount} in format
     {
-      "title": "Imports", // Shown in the hover tooltip
-      "format": "$(cloud-download) ${matchCount} Imports", // Status bar text
-      "regex": "^\\s*import\\b.*$", // JS RegExp source, escaped for JSON
-      "onlyOnSelection": false, // true counts only within the current selection
-      "alwaysShow": false, // true keeps the entry visible at zero matches
-    },
-    {
-      "title": "Exports",
-      "format": "$(cloud-upload) ${matchCount} Exports",
-      "regex": "^\\s*export\\b.*$",
-      "onlyOnSelection": false,
-      "alwaysShow": false,
-    },
-    {
-      "title": "Consoles",
-      "format": "$(debug-console) ${matchCount} Console",
-      "regex": "console\\.(log|warn|error)\\s*\\(",
-      "onlyOnSelection": false,
-      "alwaysShow": false,
-    },
-    {
       "title": "TODOs",
       "format": "$(checklist) TODOs: ${matchCount}",
       "regex": "^\\s*(//.*TODO.*|#.*TODO.*|<!--.*TODO.*-->|/\\*.*TODO.*\\*/.*)$",
