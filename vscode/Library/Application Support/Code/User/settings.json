@@ -105,8 +105,8 @@
   "data-size-count.statusBar.position": "Left", // Side of the status bar to render on: "Left" or "Right"
   "data-size-count.statusBar.priority": -1, // Ordering within that side, higher means further left
   "data-size-count.statusBar.fileSizeFormat": "$(file-text) ${fileSize}", // Vars: ${fileSize}
-  "data-size-count.statusBar.selectedSizeFormat": "$(selection) ${selectedSize}", // Vars: ${selectedSize}
-  "data-size-count.statusBar.selectionCountFormat": "${linesCount} : ${wordsCount} : ${charCount}", // Vars: ${linesCount} ${wordsCount} ${charCount} ${charCountWithoutSpaces} ${duplicateLinesCount} ${emptyLineCount} ${duplicateWordsCount}
+  "data-size-count.statusBar.selectedSizeFormat": "", // Hidden, set to "$(selection) ${selectedSize}" to show the selected byte size
+  "data-size-count.statusBar.selectionCountFormat": "${linesCount}", // Vars: ${linesCount} ${wordsCount} ${charCount} ${charCountWithoutSpaces} ${duplicateLinesCount} ${emptyLineCount} ${duplicateWordsCount}
   "data-size-count.statusBar.dataCountFormat": "$(database) ${dataCountWithBrackets} / ${maxDepth}", // Vars: ${dataType} ${dataCount} ${maxDepth} ${dataCountDesc} ${dataCountWithBrackets} ${openBracket} ${closeBracket}
   "data-size-count.statusBar.selectionMetricsSeparator": "  |  ", // Separator between selected size, selection count and data count
   "data-size-count.statusBar.regexCountSeparator": ", ", // Separator between regex count entries
