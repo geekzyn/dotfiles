@@ -119,6 +119,13 @@
       "onlyOnSelection": false,
       "alwaysShow": false,
     },
+    {
+      "title": "YAML list items", // Line matching rather than parsing, counts "- " at any indent
+      "format": "$(list-unordered) ${matchCount} items",
+      "regex": "^\\s*-\\s",
+      "onlyOnSelection": true,
+      "alwaysShow": false,
+    },
   ],
   // ─── Claude Code ──────────────────────────────────────────────────────────
   "claudeCode.preferredLocation": "panel", // Open Claude Code in the bottom panel,
