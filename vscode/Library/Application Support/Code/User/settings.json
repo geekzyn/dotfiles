@@ -109,5 +109,5 @@
     "lib",
     "resources"
   ],
-  "workbench.activityBar.location": "hidden",
+  "hediet.vscode-drawio.resizeImages": null,
 }
