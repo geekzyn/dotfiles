@@ -136,4 +136,8 @@
     "resources"
   ],
   "hediet.vscode-drawio.resizeImages": null,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.md": "vscode.markdown.editor"
+  },
 }
