@@ -3,5 +3,18 @@
   {
     "key": "ctrl+alt+b",
     "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  // Toggle Claude Code in the secondary side bar with cmd+shift+escape.
+  // Overrides the extension default (claude-vscode.editor.open), which
+  // spawns a new tab and a new conversation on every press.
+  {
+    "key": "cmd+shift+escape",
+    "command": "claude-vscode.sidebar.open",
+    "when": "!auxiliaryBarVisible"
+  },
+  {
+    "key": "cmd+shift+escape",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "auxiliaryBarVisible"
   }
 ]
