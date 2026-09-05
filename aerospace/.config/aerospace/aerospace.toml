@@ -88,13 +88,13 @@ cmd-alt-h = [] # Disable "hide others"
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
 alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance --directory ~'
-# New Safari window. Only "make new document" when Safari already runs, otherwise
-# the implicit launch opens a window and we would end up with two
-alt-b = '''exec-and-forget osascript -e '
-if running of application "Safari" then
-    tell application "Safari" to make new document at end of documents
-end if
-tell application "Safari" to activate'
+# New Firefox window. Only hand a new window to the running instance, otherwise
+# the implicit launch opens a window and we would end up with two.
+# `open` rather than the binary so a launched Firefox does not die with AeroSpace
+alt-b = '''exec-and-forget if pgrep -x firefox >/dev/null; then
+    /Applications/Firefox.app/Contents/MacOS/firefox --new-window about:newtab
+fi
+open -a Firefox
 '''
 # Toggle centred btop overlay via the shared script (also a Raycast command)
 cmd-shift-b = 'exec-and-forget /Users/abdelalizyn/.local/scripts/btop-toggle.sh'
