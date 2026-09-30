@@ -60,7 +60,7 @@
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font", // Terminal font
   "terminal.integrated.fontSize": 12, // Terminal font size in pixels
   "terminal.integrated.tabs.location": "left", // Place terminal tabs on the left of the panel
-  "terminal.integrated.defaultProfile.linux": "bash", // Default shell profile on Linux
+  "terminal.integrated.defaultProfile.linux": "zsh", // Default shell profile on Linux
   "terminal.integrated.shellIntegration.enabled": true, // Enable shell integration (command tracking)
   "terminal.integrated.suggest.enabled": true, // Enable inline command suggestions
   "terminal.integrated.suggest.quickSuggestions": {
@@ -75,7 +75,7 @@
     "ISTERM": null, // Unset ISTERM
     "ISTERM_LOGIN": null, // Unset ISTERM_LOGIN
   },
-  "terminal.external.osxExec": "kitty.app", // External terminal app on macOS
+  "terminal.external.osxExec": "Terminal.app", // External terminal app on macOS
   "terminal.integrated.profiles.linux": {
     // Available shell profiles on Linux
     "bash": {
