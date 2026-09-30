@@ -22,8 +22,8 @@ brew "microsoft/inshellisense/inshellisense"  # IDE-style inline autocomplete (f
 brew "neovim"                                 # modern Vim-based text editor
 brew "node"                                   # Node.js runtime and npm
 brew "mise"                                   # dev tool version manager (asdf replacement)
-brew "ollama"                                 # run large language models locally
-brew "aichat"                                 # LLM chat and tools from the terminal
+# brew "ollama"                                 # run large language models locally
+# brew "aichat"                                 # LLM chat and tools from the terminal
 brew "jesseduffield/lazygit/lazygit"          # terminal UI for git
 cask "visual-studio-code"                     # code editor
 cask "taproom"                                # GUI to browse and manage Homebrew packages
@@ -33,7 +33,7 @@ cask "docker"                                 # container runtime and Desktop ap
 brew "devcontainer"                           # CLI to run VS Code dev containers
 
 # ── Terminal & window management ─────────────────────
-cask "kitty"                                  # GPU-accelerated terminal emulator
+# cask "kitty"                                  # GPU-accelerated terminal emulator
 cask "nikitabobko/tap/aerospace"              # tiling window manager for macOS
 cask "raycast"                                # launcher and productivity tool
 
@@ -41,7 +41,7 @@ cask "raycast"                                # launcher and productivity tool
 cask "font-jetbrains-mono-nerd-font"          # monospaced font with programming glyphs
 
 # ── Browsers ─────────────────────────────────────────
-cask "google-chrome"                          # web browser
+# cask "google-chrome"                          # web browser
 
 # ── Productivity & communication ─────────────────────
 cask "obsidian"                               # markdown note-taking app
