@@ -128,8 +128,7 @@
     },
   ],
   // ─── Claude Code ──────────────────────────────────────────────────────────
-  "claudeCode.preferredLocation": "sidebar", // Open Claude Code in the secondary side bar (right)
-  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "claudeCode.preferredLocation": "sidebar",
   "python.analysis.extraPaths": [
     "src",
     "lib",
@@ -140,4 +139,14 @@
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.md": "vscode.markdown.editor"
   },
+  "claudeCode.hideOnboarding": true,
+  "chat.agentHost.allowSignedOutWhenUsable": true,
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.focusView": false,
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
+  "workbench.activityBar.location": "hidden",
+  "chat.titleBar.openInAgentsWindow.enabled": false,
 }
