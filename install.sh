@@ -33,6 +33,9 @@ brew update && brew bundle --file=~/.dotfiles/homebrew/Brewfile
 
 install_claude_code
 
+# symlink dotfiles
+stow zsh mise
+
 # install global tools from ~/.config/mise/config.toml (uv, ...)
 mise install
 

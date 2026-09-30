@@ -50,9 +50,8 @@ source <(carapace _carapace)
 # mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
-# uv installer shim: adds ~/.local/bin (uv-managed tools and Python) to PATH.
-# Guards against duplicate entries, so re-sourcing is safe.
-. "$HOME/.local/bin/env"
+# uv
+export PATH="$HOME/.local/bin:$PATH"
 
 #######################################################################
 #                            Custom alias                             #

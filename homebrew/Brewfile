@@ -27,7 +27,7 @@ cask "visual-studio-code"                     # code editor
 brew "taproom"                                # GUI to browse and manage Homebrew packages
 
 # ── Containers ───────────────────────────────────────
-cask "docker"                                 # container runtime and Desktop app
+cask "docker-desktop"                         # container runtime and Desktop app
 brew "devcontainer"                           # CLI to run VS Code dev containers
 
 # ── Terminal & window management ─────────────────────
