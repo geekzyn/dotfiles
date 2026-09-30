@@ -24,7 +24,7 @@ brew "node"                                   # Node.js runtime and npm
 brew "mise"                                   # dev tool version manager (asdf replacement)
 brew "jesseduffield/lazygit/lazygit"          # terminal UI for git
 cask "visual-studio-code"                     # code editor
-cask "taproom"                                # GUI to browse and manage Homebrew packages
+brew "taproom"                                # GUI to browse and manage Homebrew packages
 
 # ── Containers ───────────────────────────────────────
 cask "docker"                                 # container runtime and Desktop app
