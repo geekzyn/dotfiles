@@ -30,6 +30,9 @@ brew "taproom"                                # GUI to browse and manage Homebre
 cask "docker-desktop"                         # container runtime and Desktop app
 brew "devcontainer"                           # CLI to run VS Code dev containers
 
+# ── VS Code extensions ───────────────────────────────
+vscode "asvetliakov.vscode-neovim"            # use real neovim as the editor backend
+
 # ── Terminal & window management ─────────────────────
 # cask "kitty"                                  # GPU-accelerated terminal emulator
 cask "nikitabobko/tap/aerospace"              # tiling window manager for macOS
