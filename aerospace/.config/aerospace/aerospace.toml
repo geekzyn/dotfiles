@@ -87,7 +87,7 @@ cmd-alt-h = [] # Disable "hide others"
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-alt-enter = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance --directory ~'
+alt-enter = 'exec-and-forget open -a Terminal ~'
 # New Firefox window. Only hand a new window to the running instance, otherwise
 # the implicit launch opens a window and we would end up with two.
 # `open` rather than the binary so a launched Firefox does not die with AeroSpace
