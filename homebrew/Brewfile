@@ -1,7 +1,7 @@
 # ── Taps ─────────────────────────────────────────────
-tap "jesseduffield/lazygit"                   # source for the lazygit formula
-tap "nikitabobko/tap"                         # source for the aerospace formula
-tap "microsoft/inshellisense", "https://github.com/microsoft/inshellisense"  # source for inshellisense
+tap "jesseduffield/lazygit", trusted: true    # source for the lazygit formula
+tap "nikitabobko/tap", trusted: true          # source for the aerospace formula
+tap "microsoft/inshellisense", "https://github.com/microsoft/inshellisense", trusted: true  # source for inshellisense
 
 # ── Core CLI utilities ───────────────────────────────
 brew "coreutils"                              # GNU versions of core Unix commands (ls, cp, etc)
@@ -41,7 +41,7 @@ cask "raycast"                                # launcher and productivity tool
 cask "font-jetbrains-mono-nerd-font"          # monospaced font with programming glyphs
 
 # ── Browsers ─────────────────────────────────────────
-cask "firefox"                                 # web browser
+cask "firefox"                                # web browser
 
 # ── Productivity & communication ─────────────────────
 cask "obsidian"                               # markdown note-taking app

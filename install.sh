@@ -40,4 +40,4 @@ stow zsh mise nvim vscode aerospace starship
 mise install
 
 # make the uv-managed python the global default (python/python3 in ~/.local/bin)
-uv python install --default
+uv python install --default --preview-features python-install-default
