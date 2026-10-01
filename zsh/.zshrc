@@ -56,7 +56,7 @@ export PATH="$HOME/.local/bin:$PATH"
 #######################################################################
 #                            Custom alias                             #
 #######################################################################
-alias ls='gls -ls --hyperlink=auto --color=auto'
+alias ls='gls -lhagG --hyperlink=auto --color=auto'
 
 # inshellisense: IDE-style inline autocomplete, sourced from carapace
 # specs via the CARAPACE_BRIDGES=inshellisense entry above.
