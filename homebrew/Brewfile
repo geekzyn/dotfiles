@@ -34,7 +34,6 @@ brew "devcontainer"                           # CLI to run VS Code dev container
 vscode "asvetliakov.vscode-neovim"            # use real neovim as the editor backend
 
 # ── Terminal & window management ─────────────────────
-# cask "kitty"                                  # GPU-accelerated terminal emulator
 cask "nikitabobko/tap/aerospace"              # tiling window manager for macOS
 cask "raycast"                                # launcher and productivity tool
 
