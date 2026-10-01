@@ -10,6 +10,8 @@ brew "ripgrep"                                # fast recursive text search (rg)
 brew "tree"                                   # print directory contents as a tree
 brew "stow"                                   # symlink manager for dotfiles
 brew "zoxide"                                 # smarter cd that learns your habits
+brew "btop"                                   # interactive resource monitor (CPU, memory, disks, network, processes)
+brew "taproom"                                # terminal UI to browse and manage Homebrew packages
 
 # ── Shell & prompt ───────────────────────────────────
 brew "starship"                               # cross-shell prompt
@@ -24,7 +26,6 @@ brew "node"                                   # Node.js runtime and npm
 brew "mise"                                   # dev tool version manager (asdf replacement)
 brew "jesseduffield/lazygit/lazygit"          # terminal UI for git
 cask "visual-studio-code"                     # code editor
-brew "taproom"                                # GUI to browse and manage Homebrew packages
 
 # ── Containers ───────────────────────────────────────
 cask "docker-desktop"                         # container runtime and Desktop app
