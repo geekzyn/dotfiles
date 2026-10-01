@@ -15,8 +15,7 @@ install_brew() {
 # Claude Code, native install. Deliberately not a Homebrew cask: the native
 # binary auto-updates in the background, so new models and features land
 # without a manual upgrade. Installs to ~/.local/share/claude/versions/<ver>
-# and symlinks ~/.local/bin/claude, already on PATH via the ~/.local/bin/env
-# shim sourced in zsh/.zshrc.
+# and symlinks ~/.local/bin/claude, already on PATH via zsh/.zshrc.
 install_claude_code() {
   if [ -x "$HOME/.local/bin/claude" ]; then
     echo "Claude Code is already installed ($("$HOME/.local/bin/claude" --version))."
@@ -39,5 +38,7 @@ stow zsh mise nvim vscode aerospace starship
 # install global tools from ~/.config/mise/config.toml (uv, ...)
 mise install
 
-# make the uv-managed python the global default (python/python3 in ~/.local/bin)
-uv python install --default --preview-features python-install-default
+# make the uv-managed python the global default (python/python3 in ~/.local/bin).
+# The version is pinned: without one, uv keeps any managed python already
+# present. mise exec puts uv on PATH, since this script never activates mise.
+mise exec -- uv python install 3.14 --default --preview-features python-install-default
