@@ -35,10 +35,14 @@ install_claude_code
 # symlink dotfiles
 stow zsh mise nvim vscode aerospace starship
 
-# install global tools from ~/.config/mise/config.toml (uv, ...)
-mise install
+# uv first, so python can be installed before any python-based mise tool
+mise install uv
 
 # make the uv-managed python the global default (python/python3 in ~/.local/bin).
 # The version is pinned: without one, uv keeps any managed python already
 # present. mise exec puts uv on PATH, since this script never activates mise.
 mise exec -- uv python install 3.14 --default --preview-features python-install-default
+
+# install the remaining global tools from ~/.config/mise/config.toml. Python
+# tools now build on 3.14 instead of uv downloading an older python for them.
+mise install

@@ -17,8 +17,8 @@ Run it from `~/.dotfiles`: the Brewfile path is hard-coded, and stow uses the cu
 2. Runs `brew update`, then `brew bundle` against `homebrew/Brewfile`
 3. Installs Claude Code with the native installer, see [Claude Code](#claude-code)
 4. Stows `zsh mise nvim vscode aerospace starship`
-5. Runs `mise install` for the global tools in `mise/.config/mise/config.toml` (uv, azure-cli)
-6. Installs Python 3.14 with uv and makes it the default `python`/`python3`. The version is pinned because an unversioned `uv python install` keeps whatever managed Python is already there.
+5. Installs uv with mise, then Python 3.14 with uv, and makes it the default `python`/`python3`. The version is pinned because an unversioned `uv python install` keeps whatever managed Python is already there.
+6. Runs `mise install` for the remaining global tools in `mise/.config/mise/config.toml`. Python comes first so Python-based tools build on 3.14 instead of uv downloading an older version.
 ## Packages
 
 | Package     | Links into `$HOME`                                                                     |
