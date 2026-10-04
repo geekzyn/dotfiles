@@ -42,7 +42,8 @@ cask "raycast"                                # launcher and productivity tool
 cask "font-jetbrains-mono-nerd-font"          # monospaced font with programming glyphs
 
 # ── Browsers ─────────────────────────────────────────
-cask "firefox"                                # web browser
+cask "google-chrome"                          # web browser for development
+cask "firefox"                                # default web browser
 
 # ── Productivity & communication ─────────────────────
 cask "obsidian"                               # markdown note-taking app
